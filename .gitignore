@@ -17,3 +17,15 @@
 /yarn-error.log
 
 .byebug_history
+
+/node_modules
+/app/assets/javascripts/bundle.js
+/react/coverage
+/coverage
+package-lock.json
+.env
+log/development.log
+/log
+/tmp
+/log/test.log
+/public/uploads
