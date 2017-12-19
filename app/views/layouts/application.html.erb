@@ -10,7 +10,9 @@
   </head>
 
   <body>
+  <div id="utility-nav">
     <h1>PHILADELPHIA ARTISTS UNDERGROUND</h1>
+    <h3><em>Galleries for the virtually unknown....</em></h3>
     <nav><div id="user-buttons">
       <% if !current_user %>
         <%= link_to "Login", new_user_session_path, {class: 'util-button'} %>
@@ -18,9 +20,8 @@
       <% else %>
         <div id="signed_in">
           <a href='<%= edit_user_registration_path %>' >
-          <!-- <div class="profile-photo" style='background-image: url(<%=current_user.profile_photo%>);'>
-        </div> -->
-          <img src="<%=current_user.profile_photo%>"/>
+          <div class="profile-photo" style='background-image: url(<%=current_user.profile_photo%>);'>
+        </div>
           <%= "#{current_user.first_name}" %>
         </a>
           <%= link_to "Logout", destroy_user_session_path, method: :delete, class: 'util-button' %>
@@ -29,6 +30,7 @@
       <% end %></nav>
     <p class="flash notice"> <%= notice %> </p>
     <p class="flash alert"> <%= alert %> </p>
+  </div>
     <%= yield %>
   </body>
 </html>

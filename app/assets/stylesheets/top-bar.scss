@@ -1,0 +1,23 @@
+#utility-nav {
+  color: white;
+  padding: 0px 30px;
+  background: #111;
+}
+
+
+
+#user-buttons {
+  display: inline-block;
+  float: right;
+}
+
+.profile-photo {
+  height: 30px;
+  width: 30px;
+  background-size: cover;
+  background-position: center center;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+  border-radius: 50%;
+}
