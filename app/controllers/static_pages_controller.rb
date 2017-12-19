@@ -1,2 +1,3 @@
-class StaticPagesController < ActionController::Base
+class StaticPagesController < ApplicationController
+  
 end
