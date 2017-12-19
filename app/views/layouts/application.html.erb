@@ -4,12 +4,14 @@
     <title>Phillyunderground</title>
     <%= csrf_meta_tags %>
 
-    <!-- <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %> -->
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
   </head>
 
   <body>
-    <div id='app'></div>
+    <p class="flash notice"> <%= notice %> </p>
+    <p class="flash alert"> <%= alert %> </p>
     <%= yield %>
   </body>
 </html>
