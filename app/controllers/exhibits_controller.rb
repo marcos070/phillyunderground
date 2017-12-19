@@ -1,11 +1,8 @@
-#top level exhibit controller
+# top level exhibit controller
 class ExhibitsController < ApplicationController
-  def new
-  end
+  def new; end
 
-  def index
-  end
+  def index; end
 
-  def show
-  end
+  def show; end
 end
