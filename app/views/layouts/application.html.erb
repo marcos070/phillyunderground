@@ -10,6 +10,23 @@
   </head>
 
   <body>
+    <h1>PHILADELPHIA ARTISTS UNDERGROUND</h1>
+    <nav><div id="user-buttons">
+      <% if !current_user %>
+        <%= link_to "Login", new_user_session_path, {class: 'util-button'} %>
+        <%= link_to "Sign Up", new_user_registration_path, class: 'util-button' %>
+      <% else %>
+        <div id="signed_in">
+          <a href='<%= edit_user_registration_path %>' >
+          <!-- <div class="profile-photo" style='background-image: url(<%=current_user.profile_photo%>);'>
+        </div> -->
+          <img src="<%=current_user.profile_photo%>"/>
+          <%= "#{current_user.first_name}" %>
+        </a>
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, class: 'util-button' %>
+
+        </div>
+      <% end %></nav>
     <p class="flash notice"> <%= notice %> </p>
     <p class="flash alert"> <%= alert %> </p>
     <%= yield %>
