@@ -4,7 +4,18 @@
   background: #111;
 }
 
+.util-button {
+  text-decoration: none;
+  background-color: white;
+  //display: inline-block;
+  padding: 5px 10px;
+  margin-left: 10px;
 
+  &:hover {
+    background: blue;
+    color: green;
+  }
+}
 
 #user-buttons {
   display: inline-block;
