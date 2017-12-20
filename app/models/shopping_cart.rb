@@ -1,4 +1,4 @@
-#shopping cart model
+# shopping cart model
 class ShoppingCart < ApplicationRecord
   belongs_to :user
   has_many :checkouts
