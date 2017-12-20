@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_one :shopping_cart
+
   mount_uploader :profile_photo, ProfilePhotoUploader
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

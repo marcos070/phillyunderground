@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171219181755) do
+ActiveRecord::Schema.define(version: 20171220161251) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "checkouts", force: :cascade do |t|
+    t.bigint "exhibit_id", null: false
+    t.bigint "shopping_cart_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["exhibit_id"], name: "index_checkouts_on_exhibit_id"
+    t.index ["shopping_cart_id"], name: "index_checkouts_on_shopping_cart_id"
+  end
 
   create_table "exhibits", force: :cascade do |t|
     t.string "artist_name", null: false
@@ -23,6 +32,13 @@ ActiveRecord::Schema.define(version: 20171219181755) do
     t.string "image_url", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "shopping_carts", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_shopping_carts_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
