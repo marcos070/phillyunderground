@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
 import { Link, browserHistory } from 'react-router';
 import ExhibitsIndexTile from '../components/ExhibitsIndexTile';
+import ExhibitFormContainer from './ExhibitFormContainer';
+
 
 class ExhibitsIndexContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      exhibits: []
+      exhibits: [],
+      currentUser: null
     };
     this.getExhibits = this.getExhibits.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+
     // dont forget bindings
   }
 
@@ -39,6 +44,12 @@ class ExhibitsIndexContainer extends Component {
     this.getExhibits();
   }
 
+  handleClick(event) {
+    event.preventDefault();
+    browserHistory.push('/venues/new');
+  }
+
+
 
   render() {
 
@@ -55,9 +66,17 @@ class ExhibitsIndexContainer extends Component {
         />
       )
     })
+
+    let button = <Link to={`/exhibits/new`} >Add a new exhibition</Link>
+
     return(
       <div>
-        {exhibits}
+        <div>
+            {button}
+        </div>
+        <div>
+          {exhibits}
+        </div>
       </div>
     )
   }
