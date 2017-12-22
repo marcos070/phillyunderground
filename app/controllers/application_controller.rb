@@ -21,9 +21,9 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def require_admin
-    unless current_user.admin?
-      redirect_to '/404'
-    end
-  end
+  # def require_admin
+  #   unless current_user.admin?
+  #     redirect_to '/404'
+  #   end
+  # end
 end
