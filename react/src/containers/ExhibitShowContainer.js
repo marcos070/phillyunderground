@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import ExhibitShowTile from "../components/ExhibitShowTile"
+import ExhibitShowTile from "../components/ExhibitShowTile";
+import SelectField from '../components/SelectField';
+import size from '../Constant';
 
 class ExhibitShowContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
       exhibit: {}
+      // quantity: '',
+      // size: ''
     }
     //dont forget to bind
   }
@@ -40,6 +44,7 @@ class ExhibitShowContainer extends Component {
     render() {
         return(
           <div>
+          <div>
             <ExhibitShowTile
               key={this.state.exhibit.id}
               id={this.state.exhibit.id}
@@ -48,6 +53,30 @@ class ExhibitShowContainer extends Component {
               imageUrl={this.state.exhibit.image_url}
               price={this.state.exhibit.price}
             />
+          </div>
+          <div id='review_form'>
+            <div id='errors'>{this.state.errors}</div>
+              <form onSubmit={this.handleFormSubmit}>
+                <SelectField
+                  content={this.state.quantity}
+                  label="Quantity"
+                  name="quantity"
+                  options={[1, 2, 3, 4, 5]}
+                  onChange={this.handleChange}
+                />
+                <SelectField
+                content={this.state.size}
+                label="Size:"
+                name="size"
+                options={size}
+                onChange={this.handleChange}
+              />
+                <div className="button-group">
+                  <span className="custom-button" onClick={this.handleClearForm} >Clear</span>
+                  <input className="button" type="submit" value="Submit" />
+                </div>
+              </form>
+            </div>
           </div>
         );
     }
