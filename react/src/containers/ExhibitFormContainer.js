@@ -131,36 +131,36 @@ class ExhibitFormContainer extends Component {
 
   render() {
     return(
-      <div className='exhibit-form'>
-        <form className="new-exhibit-form callout" onSubmit={this.handleFormSubmit}>
+      <div className='form-container'>
+        <form className="exhibit-form" onSubmit={this.handleFormSubmit}>
           <div className='row'>
             <TextField
               content={this.state.artistName}
-              label="Artist's Name:"
+              label="Artist's Name:   "
               name="artistName"
               onChange={this.handleChange}
             />
             <TextField
               content={this.state.title}
-              label="Title:"
+              label="Title:   "
               name="title"
               onChange={this.handleChange}
             />
             <NumberField
               content={this.state.price}
-              label="Price:"
+              label="Price:   "
               name="price"
               onChange={this.handleChange}
             />
             <TextField
               content={this.state.genre}
-              label="Genre:"
+              label="Genre:   "
               name="genre"
               onChange={this.handleChange}
             />
             <TextField
               content={this.state.imageUrl}
-              label="Exhibit Photo URL:"
+              label="Exhibit Photo URL:   "
               name="imageUrl"
               onChange={this.handleChange}
             />
