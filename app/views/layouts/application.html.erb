@@ -11,10 +11,12 @@
   </head>
 
   <body>
-  <div id="utility-nav">
-    <h1>PHILADELPHIA ARTISTS UNDERGROUND</h1>
-    <h3><em>Galleries for the virtually unknown....</em></h3>
-    <nav><div id="user-buttons">
+  <div id="utility-nav" class="row">
+    <div class="ten columns">
+      <h1>Philadelphia Artists Underground</h1>
+      <h3><em>Galleries for the virtually unknown....</em></h3>
+    </div>
+    <div id="user-buttons" class="two columns">
       <% if !current_user %>
         <%= link_to "Login", new_user_session_path, {class: 'util-button'} %>
         <%= link_to "Sign Up", new_user_registration_path, class: 'util-button' %>
@@ -24,13 +26,13 @@
           <div class="profile-photo" style='background-image: url(<%=current_user.profile_photo%>);'>
         </div>
           <%= "#{current_user.first_name}" %>
-        </a>
           <%= link_to "Logout", destroy_user_session_path, method: :delete, class: 'util-button' %>
-
         </div>
-      <% end %></nav>
-    <p class="flash notice"> <%= notice %> </p>
-    <p class="flash alert"> <%= alert %> </p>
+        </a>
+      <% end %>
+    </div>
+      <p class="flash notice"> <%= notice %> </p>
+      <p class="flash alert"> <%= alert %> </p>
   </div>
     <%= yield %>
   </body>

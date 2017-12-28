@@ -54,7 +54,7 @@ class ExhibitShowContainer extends Component {
               price={this.state.exhibit.price}
             />
           </div>
-          <div id='review_form'>
+          <div className="selection-fields">
             <div id='errors'>{this.state.errors}</div>
               <form onSubmit={this.handleFormSubmit}>
                 <SelectField

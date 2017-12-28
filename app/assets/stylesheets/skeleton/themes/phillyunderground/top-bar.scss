@@ -1,19 +1,19 @@
 #utility-nav {
-  color: white;
+  color: $highlight;
   padding: 0px 30px;
-  background: #111;
+  background: $background;
 }
 
 .util-button {
   text-decoration: none;
   background-color: white;
-  //display: inline-block;
+  display: inline-block;
   padding: 5px 10px;
   margin-left: 10px;
 
   &:hover {
-    background: blue;
-    color: green;
+    background: $buttons;
+    color: $highlight;
   }
 }
 

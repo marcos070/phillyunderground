@@ -72,7 +72,7 @@ class ExhibitsIndexContainer extends Component {
     return(
       <div>
         <div>
-            {button}
+            <button>{button}</button>
         </div>
         <div>
           {exhibits}

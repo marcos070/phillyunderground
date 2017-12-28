@@ -10,7 +10,7 @@ Exhibit.destroy_all
 exhibits = [
   {
     artist_name: "Bryce Hudson",
-    title: "Geometric Abstraction - Untitled (#46)",
+    title: "Geometric Abstraction",
     price: 49.99,
     genre: "Modern",
     image_url: "http://www.brycehudson.com/wp-content/uploads/2015/03/Composition-46-Abstract-Geometric-Art-Painting-by-Bryce-Hudson-16x20.jpg"
