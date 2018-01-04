@@ -133,6 +133,7 @@ class ExhibitFormContainer extends Component {
     return(
       <div className='form-container'>
         <form className="exhibit-form" onSubmit={this.handleFormSubmit}>
+          <h3>Share with us!</h3>
           <div className='row'>
             <TextField
               content={this.state.artistName}

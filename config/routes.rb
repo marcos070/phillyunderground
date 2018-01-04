@@ -7,7 +7,14 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :exhibits, only: [:index, :show, :new, :create] do
+        resources :checkouts, only: [:create]
       end
+    end
+  end
+
+  namespace :api do
+    namespace :v1 do
+      resources :checkouts, only: [:index, :show, :create]
     end
   end
 
